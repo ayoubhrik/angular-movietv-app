@@ -1,3 +1,10 @@
+## App Demo [Click Here >](https://infallible-carson-b2c664.netlify.app/)
+## ScreenShots
+
+<img src="Screenshots/1.PNG" width="600" /><img src="Screenshots/2.PNG" width="600" /><img src="Screenshots/3.PNG" width="600" /><br>
+<img src="Screenshots/4.PNG" width="600" /><img src="Screenshots/5.PNG" width="600" /><br><img src="Screenshots/6.PNG" width="300" /><br><br>
+
+
 # AngularMovieDb
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.3.
