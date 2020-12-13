@@ -1,0 +1,18 @@
+<div class="container ctn">
+    <div class="up-in-toggle">
+        <input type="radio" id="switch_left" name="switch_2" value="yes" checked/>
+        <label for="switch_left" (click)="getSearchedMoviesNow()" [ngClass]="{'labelcheked': ismovie}">Movies</label>
+        <input type="radio" id="switch_right" name="switch_2" value="no" />
+        <label for="switch_right" (click)="getSearchedTvNow()" [ngClass]="{'labelcheked': !ismovie}">Tv</label>
+    </div>
+
+    <div class="box">
+
+        <app-search-item class="box-item" *ngFor="let item of searchedmovies" [type]="ismovie" [item]="item">
+
+        </app-search-item>
+
+
+    </div>
+    <app-footer></app-footer>
+</div>

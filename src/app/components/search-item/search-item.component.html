@@ -1,0 +1,20 @@
+<div class="item-card-wrapper" routerLink="/{{type ? 'movie':'tv'}}/{{item?.id}}">
+
+    <a><img src="https://image.tmdb.org/t/p/w500{{item?.backdrop_path}}" alt=""></a>
+    <div class="hidden-infos">
+        <span>{{item?.original_title || item?.name}}</span>
+        <div class="hidden-infos-wrapper">
+            <span class="tags vote">{{item?.vote_average * 10}}% Recommended</span>
+            <span class="tags">{{(item?.release_date | date:'y') || (item?.first_air_date | date:'y')}}</span>
+            <span class="tags">
+                <span class="mr-1 badge badge-light genres"  *ngFor="let genre of arraygenres">
+                    {{genre}}
+                </span>
+            </span>
+
+
+        </div>
+
+    </div>
+
+</div>

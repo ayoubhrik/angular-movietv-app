@@ -1,0 +1,108 @@
+.notification-sub-menu {
+    background-color: inherit;
+    position: absolute;
+    color: var(--white);
+    border: solid 1px rgba(255, 255, 255, .15);
+    cursor: default;
+    left: -230px;
+    top: 54px;
+    z-index: 805;
+}
+
+.topbar {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #e5e5e5;
+}
+
+.sub-menu-list {
+    height: auto;
+    padding: 0;
+    display: block;
+    max-height: 80vh;
+    min-height: 100px;
+    overflow: auto;
+    list-style: none;
+    width: auto;
+}
+
+.sub-menu-item {
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    background-color: rgba(0, 0, 0, .85);
+}
+
+.notification-wrapper {
+    display: flex;
+    flex-direction: row;
+    padding: 16px;
+}
+
+.notification-wrapper a {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.notification-wrapper .image {
+    margin-right: 16px;
+}
+
+.notification-wrapper .title-card {
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    border-radius: 4px;
+}
+
+.notification-wrapper .text {
+    line-height: 1.2;
+    color: #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 264px;
+    width: 100%;
+}
+
+.notification-wrapper .header {
+    color: var(--primaryColor);
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+
+.notification-wrapper .age {
+    font-size: 12px;
+    line-height: 1.3;
+    color: grey;
+    margin-top: 3px;
+}
+
+.notification-arrow {
+    border: solid 7px;
+    border-color: transparent transparent #e5e5e5;
+    height: 0;
+    margin-left: -7px;
+    width: 0;
+    position: absolute;
+    z-index: 301;
+    left: 255px;
+    top: -16px;
+}
+
+@media (max-width: 992px) {
+    .notification-sub-menu {
+        left: -105px;
+    }
+    .sub-menu-list {
+        width: 241px;
+        max-width: 241px;
+        min-width: auto;
+    }
+    .notification-arrow {
+        left: 129px;
+        top: -16px;
+    }
+}

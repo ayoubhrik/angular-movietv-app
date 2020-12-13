@@ -1,0 +1,26 @@
+<div class="notification-sub-menu">
+    <div class="notification-arrow" style="opacity: 1; transition-duration: 150ms;"></div>
+    <div class="topbar"></div>
+
+
+    <ul class="sub-menu-list">
+        <li class="sub-menu-item" *ngFor="let movie of upcommingmovies">
+            <div class="notification-wrapper">
+                <a class="element image" routerLink="/movie/{{movie?.id}}">
+                    <img class="title-card" src="https://image.tmdb.org/t/p/w500{{movie.poster_path}}" sizes="112px">
+                </a>
+                <a class="element text" routerLink="/movie/{{movie?.id}}">
+                    <div class="header">New Arrival</div>
+                    <div class="body">{{movie?.original_title}}</div>
+                    <div class="age">
+                        <span class="relative-time" *ngIf="movie?.timeout == 0">Today</span>
+                        <span class="relative-time" *ngIf="movie?.timeout != 0">After {{movie?.timeout}} day</span>
+                    </div>
+                </a>
+            </div>
+        </li>
+
+    </ul>
+
+
+</div>

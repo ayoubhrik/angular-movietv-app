@@ -1,0 +1,8 @@
+.mat-dialog-container {
+    padding: 0px !important;
+    background: #000000 !important;
+}
+
+.trailer-title {
+    color: var(--white) !important;
+}

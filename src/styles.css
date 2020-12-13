@@ -1,1 +1,318 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&display=swap');
+:root {
+    --primaryColor: #00dc89;
+    --navbarBlack: rgb(11 11 11);
+    --bgcolor: #141414;
+    --white: #fff;
+    --black: #222;
+    --mainTransition: all 0.3s ease-in-out;
+}
+
+body {
+    font-family: 'Heebo', sans-serif !important;
+    background: var(--bgcolor) !important;
+    color: var(--white)!important;
+}
+
+.container {
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+}
+
+.navbar {
+    background-color: var(--navbarBlack)!important;
+}
+
+.nav-icons {
+    font-size: 1.2rem!important;
+    color: var(--white)!important;
+    padding-right: 1rem!important;
+    padding-left: 1rem!important;
+    cursor: pointer;
+}
+
+.card-item {
+    width: 259px;
+    height: 480px;
+    background-color: var(--white);
+    display: inline-flex;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 4px;
+    transition: transform 300ms ease 100ms;
+}
+
+.card-item:hover {
+    transform: scale(1.05);
+    z-index: 155;
+}
+
+.card-item img {
+    object-fit: fill;
+    width: 100%;
+}
+
+.slider {
+    display: flex;
+    flex-direction: row;
+}
+
+#carousel-scroll-container {
+    white-space: nowrap;
+    overflow: hidden;
+    width: calc(100%);
+}
+
+#slider-container {
+    overflow-x: hidden;
+    width: 100%;
+    scroll-behavior: smooth;
+    padding: 13px 0;
+}
+
+#carousel-left-arrow,
+#carousel-right-arrow {
+    width: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#carousel-right-arrow {
+    align-items: flex-end;
+    z-index: 800;
+    position: relative;
+}
+
+#carousel-left-arrow {
+    align-items: flex-start;
+}
+
+.title {
+    display: block;
+    margin-top: 20px;
+    margin-left: 27px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.movie-item {
+    height: calc(100vh - 60px);
+    background-size: cover;
+    background-position: center top;
+}
+
+.return-home {
+    margin-bottom: 37px;
+    padding-top: 24px;
+    display: block;
+}
+
+.return-home a {
+    text-decoration: none;
+    font-weight: 500;
+    color: rgba(255, 255, 255, .5) !important;
+}
+
+.return-home a:hover {
+    text-decoration: none;
+    font-weight: 500;
+    color: var(--white) !important;
+}
+
+.return-home a span {
+    margin-left: 5px;
+    font-size: 18px;
+}
+
+.movieitem-wrapper {
+    display: flex;
+    justify-content: center;
+    min-height: 390px;
+}
+
+.movieitem-left-wrapper {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.movieitem-right-wrapper {
+    display: inline-block;
+    margin-left: 72px;
+    vertical-align: top;
+    max-width: 672px;
+    width: 672px;
+    margin-bottom: 50px;
+}
+
+.movieitem-title {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 24px;
+}
+
+.movie-tags {
+    margin-bottom: 8px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.movie-tags .tags {
+    font-size: 14px;
+    line-height: 28px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    margin-right: 22px;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.movie-rating {
+    font-weight: 800;
+    font-size: 18px;
+}
+
+.movie-tags .tags img {
+    margin-right: 5px;
+}
+
+.actors {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.actors .actor-item {
+    margin-right: 20px;
+    align-items: center;
+    display: flex;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.actor-item div {
+    line-height: 20px;
+}
+
+.actor-item div small {
+    font-size: 12px;
+    color: var(--primaryColor);
+}
+
+.actor-item div p {
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.actors img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 0 15px 0 0;
+    object-fit: cover;
+}
+
+.movie-description {
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.cast-title {
+    margin-bottom: 10px;
+}
+
+.poster-img {
+    border-radius: 4px;
+}
+
+.play-icon {
+    cursor: pointer;
+    position: absolute;
+    top: 260px;
+}
+
+.custom-dialog-container .mat-dialog-container {
+    padding: 0px !important;
+}
+
+.serie-silder-container {
+    margin-bottom: 50px;
+}
+
+.notification-icon-wrapper {
+    position: relative;
+}
+
+@media (max-width: 992px) {
+    .card-item {
+        width: 154px;
+        height: 335px;
+        background-color: var(--white);
+        display: inline-flex;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: transform 300ms ease 100ms;
+    }
+}
+
+@media (max-width: 768px) {
+    .card-item {
+        width: 151.5px;
+        height: 335px;
+        background-color: var(--white);
+        display: inline-flex;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: transform 300ms ease 100ms;
+    }
+    .movieitem-wrapper {
+        flex-direction: column;
+    }
+    .movieitem-left-wrapper {
+        margin-bottom: 50px;
+    }
+    .movieitem-right-wrapper {
+        margin-left: 0;
+        max-width: 100%;
+        width: 100%;
+    }
+    .movie-item {
+        height: auto !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .card-item {
+        width: 128.5px;
+        height: 255px;
+        background-color: var(--white);
+        display: inline-flex;
+        cursor: pointer;
+        overflow: hidden;
+        border-radius: 4px;
+        transition: transform 300ms ease 100ms;
+    }
+    .slider {
+        padding: 0 15px!important;
+    }
+    .title {
+        margin-left: 40px;
+    }
+    .ctn {
+        padding: 0 1rem !important;
+    }
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}

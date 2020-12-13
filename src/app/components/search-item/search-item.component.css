@@ -1,0 +1,68 @@
+.item-card-wrapper:hover {
+    border-radius: 4px !important;
+    box-shadow: rgba(0, 0, 0, 0.8) 0px 3px 20px;
+    position: absolute;
+}
+
+.item-card-wrapper {
+    font-size: 11px;
+}
+
+img {
+    max-width: 100%;
+    min-height: 100%;
+    border-radius: 4px;
+}
+
+img:hover,
+img:active,
+img:focus {
+    border-radius: 4px 4px 0 0 !important;
+}
+
+.hidden-infos {
+    display: none;
+}
+
+div:hover .hidden-infos {
+    padding: 10px;
+    border-radius: 0 0 4px 4px !important;
+    display: flex;
+    flex-direction: column;
+    background-color: #181818;
+    width: 100%;
+    margin-top: -3px;
+    position: relative;
+}
+
+.hidden-infos-wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 9px;
+}
+
+.hidden-infos-wrapper .tags {
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 10px;
+}
+
+.hidden-infos-wrapper .vote {
+    color: var(--primaryColor);
+}
+
+.hidden-infos-wrapper .genres {
+    font-weight: 500 !important;
+}
+
+@media screen and (max-width: 576px) {
+    .item-card-wrapper:hover {
+        position: relative;
+    }
+    .item-card-wrapper {
+        font-size: 15px;
+    }
+    .hidden-infos-wrapper {
+        font-size: 12px;
+    }
+}

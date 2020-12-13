@@ -1,0 +1,39 @@
+<div class="container">
+    <span class="title">Movies</span>
+    <div class="slider container">
+        <div id="carousel-left-arrow" (click)="scrollLeft(slidercontainer)">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+        <div id="carousel-scroll-container">
+            <div id="slider-container" #slidercontainer>
+                <app-card-movie *ngFor="let item of listmovies" [item]="item"></app-card-movie>
+
+            </div>
+
+        </div>
+
+        <div id="carousel-right-arrow" (click)="scrollRight(slidercontainer) ">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+
+    </div>
+    <span class="title">TV Series</span>
+    <div class="slider container serie-silder-container">
+        <div id="carousel-left-arrow" (click)="scrollLeftS(slidercontainerseries)">
+            <i class="fa fa-chevron-left"></i>
+        </div>
+        <div id="carousel-scroll-container">
+            <div id="slider-container" #slidercontainerseries>
+                <app-card-serie *ngFor="let item of listseries" [item]="item"></app-card-serie>
+
+            </div>
+
+        </div>
+
+        <div id="carousel-right-arrow" (click)="scrollRightS(slidercontainerseries) ">
+            <i class="fa fa-chevron-right"></i>
+        </div>
+
+    </div>
+    <app-footer></app-footer>
+</div>

@@ -1,0 +1,47 @@
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#"><img width="130" src="assets/images/redgoodlogo.svg" /></a>
+        <button class="navbar-toggler" type="button" (click)="navbarToggle()" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+        <div class="collapse navbar-collapse" [ngClass]="navbaropen" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" routerLink="/popular">Popular <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" routerLink="/now_playing">Now playing</a>
+                </li>
+                <li class="nav-item" [routerLinkActive]="['active']">
+                    <a class="nav-link" routerLink="/top_rated">Top rated</a>
+                </li>
+            </ul>
+
+            <ul class="navbar-nav ml-md-auto right-navbar">
+                <li class="nav-item ">
+                    <div class="searchbox">
+                        <div class="searchinput" *ngIf="searchopen">
+
+                            <span class="icon-search"><i class="fa fa-search"></i></span>
+                            <input type="text" name="searchInput" (keyup.enter)="search(searchkeyword)" appFocus (focusout)="searchToggle()" [(ngModel)]="searchkeyword" class="input" placeholder="Titles ..." />
+                            <span class="icon-close"><i  (click)="searchCloseToggle()"class="fa fa-times"></i></span>
+                        </div>
+                        <div class="searchicon" (click)="searchToggle()" *ngIf="!searchopen">
+                            <a class="nav-link nav-icons"><i  class="fa fa-search"></i></a>
+                        </div>
+                    </div>
+
+
+
+
+                </li>
+                <li class="nav-item notification-icon-wrapper" (click)="$event.stopPropagation()">
+                    <a class="nav-link nav-icons"><i (click)="notificationToggle()"  class="fa fa-bell"></i></a>
+                    <app-notification-menu *ngIf="notificationopen" [upcommingmovies]="upcommingmovies"></app-notification-menu>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</nav>

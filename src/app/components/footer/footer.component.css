@@ -1,0 +1,13 @@
+.github {
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.github a {
+    font-size: 12px;
+    text-decoration: none;
+    color: rgb(95, 95, 95);
+}

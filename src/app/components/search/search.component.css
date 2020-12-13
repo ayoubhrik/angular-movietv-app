@@ -1,0 +1,164 @@
+.box {
+    margin: 40px 0;
+}
+
+.box .box-item {
+    transition: transform .3s;
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .box .box-item:nth-child(5n):hover {
+        transition: transform .3s;
+        transform: translate(-20px, 0px) scale(1.6);
+    }
+    .box .box-item:nth-child(5n+1):hover {
+        transition: transform .3s;
+        transform: translate(20px, 0px) scale(1.6);
+    }
+    .box .box-item:hover {
+        transition: transform .3s;
+        transform: scale(1.6);
+        z-index: 400;
+    }
+    .box {
+        display: grid;
+        grid-gap: 20px 5px;
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+    }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 992px) {
+    .box {
+        display: grid;
+        grid-gap: 20px 5px;
+        grid-template-columns: repeat(5, minmax(100px, 1fr));
+    }
+    .box .box-item:nth-child(5n):hover {
+        transition: transform .3s;
+        transform: translate(-56px, 0px) scale(1.6);
+    }
+    .box .box-item:nth-child(5n+1):hover {
+        transition: transform .3s;
+        transform: translate(56px, 0px) scale(1.6);
+    }
+    .box .box-item:hover {
+        transition: transform .3s;
+        transform: scale(1.6);
+        z-index: 400;
+    }
+}
+
+@media screen and (max-width: 992px) and (min-width: 768px) {
+    .box {
+        display: grid;
+        grid-gap: 20px 5px;
+        grid-template-columns: repeat(4, minmax(100px, 1fr));
+    }
+    .box .box-item:nth-child(4n):hover {
+        transition: transform .3s;
+        transform: translate(-52px, 0px) scale(1.6);
+    }
+    .box .box-item:nth-child(4n+1):hover {
+        transition: transform .3s;
+        transform: translate(52px, 0px) scale(1.6);
+    }
+    .box .box-item:hover {
+        transition: transform .3s;
+        transform: scale(1.6);
+        z-index: 400;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 576px) {
+    .box {
+        display: grid;
+        grid-gap: 20px 5px;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+    }
+    .box .box-item:nth-child(3n):hover {
+        transition: transform .3s;
+        transform: translate(-53px, 0px) scale(1.6);
+    }
+    .box .box-item:nth-child(3n+1):hover {
+        transition: transform .3s;
+        transform: translate(53px, 0px) scale(1.6);
+    }
+    .box .box-item:hover {
+        transition: transform .3s;
+        transform: scale(1.6);
+        z-index: 400;
+    }
+}
+
+
+/* ========= begin tv_movie_toggler =========*/
+
+.up-in-toggle {
+    margin-top: 20px;
+    border: 1px solid var(--primaryColor);
+    width: fit-content;
+    border-radius: 15.5px;
+}
+
+.up-in-toggle input {
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+    display: none;
+}
+
+.up-in-toggle .labelcheked {
+    background: var(--primaryColor);
+    color: #000;
+    font-weight: 500;
+    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.09), 0 6px 6px rgba(0, 0, 0, 0.13);
+    transform: scale(1.1);
+}
+
+.up-in-toggle label {
+    display: inline-block;
+    width: 60px;
+    background-color: #ffffff00;
+    color: #fff;
+    text-align: center;
+    font-size: 0.8rem;
+    padding: 6px 6px;
+    transition: all 0.1s ease-in-out;
+    margin-bottom: 0 !important;
+}
+
+.up-in-toggle label:hover {
+    cursor: pointer;
+}
+
+.up-in-toggle label:first-of-type {
+    border-radius: 15.5px;
+}
+
+.up-in-toggle label:last-of-type {
+    border-radius: 15.5px;
+}
+
+
+/* ========= end tv_movie_toggler =========*/
+
+@media screen and (max-width: 576px) {
+    .box {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(1, 1fr);
+        margin: 40px 5vh;
+    }
+    .box .box-item:hover {
+        transition: transform .3s;
+        transform: scale(1.2);
+        z-index: 400;
+    }
+    .up-in-toggle {
+        margin-top: 20px !important;
+        margin: auto;
+    }
+}
